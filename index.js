@@ -7,6 +7,7 @@ const PORT = 5050;
 
 server.use(express.json())
 
+// below endpoint was for testing purposes
 server.get('/api/dishes/:id', (req, res) => {
      const { id }  = req.params; 
         helpersDb.getDish(id)
@@ -21,3 +22,4 @@ server.get('/api/dishes/:id', (req, res) => {
 server.listen(PORT, ()=>{
     console.log(`Listening on port ${PORT}!`)
 })
+

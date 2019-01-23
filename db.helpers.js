@@ -24,3 +24,11 @@ function getDish(id){
         .where('dishes.id', id)
         .join('recipes', 'dishes.id', 'recipes.dish_id')
 }
+
+function getRecipes(){
+    return db('recipes')
+}
+
+function addRecipe(recipe){
+    return db('recipes').insert(recipe);
+}
